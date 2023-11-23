@@ -23,13 +23,12 @@ struct DetailsApplicationsView: View {
                 
                 HStack{
                     Image(application.imageName)
-                    
                         .resizable()
                         .frame(width: 119, height: 120)
                         .cornerRadius(26)
                         .padding(.leading, 20)
                         .padding(.trailing, 20)
-                        .accessibilityHidden(true)
+                       
                 
                     VStack{
                         
@@ -78,6 +77,10 @@ struct DetailsApplicationsView: View {
                         .foregroundColor(Color.gray)
                         .multilineTextAlignment(.leading)
                         .padding([.top, .leading], 20.0)
+                        .accessibilityLabel("9.8 ratings 4.4")
+                        
+                        
+                        
                     
                     Spacer()
                     
@@ -87,6 +90,8 @@ struct DetailsApplicationsView: View {
                         .foregroundColor(Color.gray)
                         .multilineTextAlignment(.center)
                         .padding(.top, 20.0)
+                        .accessibilityLabel("Age 4+ years old")
+                    
                     
                     Spacer()
                     
@@ -98,6 +103,7 @@ struct DetailsApplicationsView: View {
                         .multilineTextAlignment(.trailing)
                         .padding(.top, 20.0)
                         .padding(.horizontal, 20.0)
+                        .accessibilityLabel("Chart 9 No. News")
                     
                 }
                 HStack{
@@ -108,7 +114,7 @@ struct DetailsApplicationsView: View {
                         .multilineTextAlignment(.center)
                         .padding(.leading, 50.0)
                         .padding(.top, 1)
-                    
+                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                     
                     Spacer()
                     
@@ -118,6 +124,8 @@ struct DetailsApplicationsView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(Color.gray)
                         .padding(.leading, 30.0)
+                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                    
                     Spacer()
                     
                     Text("No.9")
@@ -125,7 +133,7 @@ struct DetailsApplicationsView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(Color.gray)
                         .padding(.horizontal, 20.0)
-                    
+                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                 }
                 
                 HStack{
@@ -167,7 +175,7 @@ struct DetailsApplicationsView: View {
                         .fontWeight(.regular)
                         .foregroundColor(Color.gray)
                         .padding(.leading, 10.0)
-                    
+                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                     Spacer()
                     
                     Text("News")
@@ -175,7 +183,7 @@ struct DetailsApplicationsView: View {
                         .fontWeight(.regular)
                         .foregroundColor(Color.gray)
                         .padding(.horizontal, 20.0)
-                    
+                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                 }
                 
                 ScrollView(.horizontal, showsIndicators: false){
@@ -187,7 +195,8 @@ struct DetailsApplicationsView: View {
                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                             .cornerRadius(27)
                             .padding(.top, 20.0)
-                            .accessibilityHidden(true)
+                            .accessibilityIdentifier("Image")
+                            
                         Image(application.imagedescription2)
                             .resizable()
                             .foregroundColor(.clear)
@@ -195,7 +204,7 @@ struct DetailsApplicationsView: View {
                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                             .cornerRadius(26)
                             .padding(.top, 20.0)
-                            .accessibilityHidden(true)
+                            .accessibilityIdentifier("Image")
                         Image(application.imagedescription3)
                             .resizable()
                             .foregroundColor(.clear)
@@ -203,7 +212,7 @@ struct DetailsApplicationsView: View {
                             .background(Color(red: 0.85, green: 0.85, blue: 0.85))
                             .cornerRadius(26)
                             .padding(.top, 20.0)
-                            .accessibilityHidden(true)
+                            
                     }
                     .padding(.horizontal,20.0)
                     
